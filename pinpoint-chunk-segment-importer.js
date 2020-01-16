@@ -3,11 +3,17 @@ AWS.config.update({
   region: process.env.AWS_REGION
 });
 const pinpoint = new AWS.Pinpoint();
-const importFiles = ['split0.csv', 'split1.csv', 'split2.csv', 'split3.csv', 'split4.csv', 'split5.csv', 'split6.csv', 'split7.csv'];
+
+// For Test 1
 //const importFiles = ['70k.csv'];
+
+// For Test 2
+const importFiles = ['split0.csv', 'split1.csv', 'split2.csv', 'split3.csv', 'split4.csv', 'split5.csv', 'split6.csv', 'split7.csv'];
+
+// For Test 3
 //const importFiles = ['test'];
 
-const s3Bucket = 's3://parrallel-import-pinpoint';
+const s3Bucket = 's3://[Some S3 bucket Name]';
 
 const import_chunk = function(filename) {
     
